@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas Exercise</title>
+</head>
+
+<body>
+
+    <canvas id="cavasExample" width="300" height="300" style="border:1px solid black;">
+        Canvas tag is not supported in this browser!
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById('cavasExample'),
+            context = canvas.getContext('2d', { alpha: true });
+
+        function drawLine(srcX, srcY, desX, desY) {
+            context.beginPath();
+            context.moveTo(srcX, srcY);
+            context.lineTo(desX, desY);
+            context.stroke();
+        }
+
+        function drawRectangle(rectObj) {
+            context.beginPath();
+            context.rect(rectObj.xCord, rectObj.yCord, rectObj.width, rectObj.height);
+            context.fillStyle = rectObj.fillColor;
+            context.fill();
+            context.lineWidth = rectObj.borderSize;
+            context.strokeStyle = rectObj.strokeStyle;
+            context.stroke();
+        }
+
+        rectObj = {
+            xCord: 0,
+            yCord: 0,
+            width: 150,
+            height: 150,
+            fillColor: "rgba(0, 0, 255, 0.4)",  //blue
+            strokeStyle: 'white',
+            opacity: 0.4,
+            borderSize: 2
+        }
+        drawRectangle(rectObj);
+
+        rectObj = {
+            xCord: 150,
+            yCord: 0,
+            width: 150,
+            height: 150,
+            fillColor: "rgba(128, 128, 128, 0.4)",
+            strokeStyle: 'white',
+            opacity: 0.4,
+            borderSize: 2
+        }
+        drawRectangle(rectObj);
+
+        rectObj = {
+            xCord: 0,
+            yCord: 150,
+            width: 150,
+            height: 150,
+            opacity: 0.4,
+            fillColor: "rgba(128, 0, 0, 0.4)", //"maroon",
+            strokeStyle: 'white',
+            borderSize: 2
+        }
+        drawRectangle(rectObj);
+
+        rectObj = {
+            xCord: 150,
+            yCord: 150,
+            width: 150,
+            height: 150,
+            opacity: 0.4,
+            fillColor: "rgba(0, 255, 255, 0.4)",  //aqua
+            strokeStyle: 'white',
+            borderSize: 2
+        }
+        drawRectangle(rectObj);
+
+    </script>
+</body>
+
+</html>
