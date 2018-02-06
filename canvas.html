@@ -10,9 +10,45 @@
 
 <body>
 
-    <canvas id="cavasExample" width="300" height="300" style="border:1px solid black;">
-        Canvas tag is not supported in this browser!
-    </canvas>
+    <section>
+        <p>SVG</p>
+
+        <!-- Create a SVG element that will hold shapes within it -->
+        <svg width="300" height="300" style="border:1px solid black;">
+
+            <!-- SVG rectangle element -->
+            <rect x="0" y="0" width="150" height="150" style="fill:blue;stroke-width:2;stroke:white;opacity:0.4" />
+
+            <!-- SVG rectangle element -->
+            <rect x="150" y="0" width="150" height="150" style="fill:grey;stroke-width:2;stroke:white;opacity:0.4" />
+
+            <!-- SVG rectangle element -->
+            <rect x="0" y="150" width="150" height="150" style="fill:maroon;stroke-width:2;stroke:white;opacity:0.4" />
+
+            <!-- SVG rectangle element -->
+            <rect x="150" y="150" width="150" height="150" style="fill:aqua;stroke-width:2;stroke:white;opacity:0.4" />
+
+
+            <!-- SVG rectangle element with color gradient
+        <rect x="50" y="390" rx="10" ry="10" width="400" height="100" style="fill:url(#rect2Gradient);stroke-width:2;stroke:black;opacity:0.5"
+        /> -->
+
+            <!-- Fallback text -->
+            Your browser does not support the SVG tag.
+        </svg>
+    </section>
+
+
+
+
+    <section>
+        <p>Canvas</p>
+
+
+        <canvas id="cavasExample" width="300" height="300" style="border:1px solid black;">
+            Canvas tag is not supported in this browser!
+        </canvas>
+    </section>
 
     <script>
         var canvas = document.getElementById('cavasExample'),
