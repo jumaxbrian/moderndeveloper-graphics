@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <title>
+        HTML5 New Features
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="project1.css">
+</head>
+
+<body>
+    <header>
+        Welcome to FantasyLeague.com: New user registration portal
+    </header>
+
+    <section>
+        <svg width="600" height="100" style="border:1px solid grey;">
+
+            <!-- Defining a color gradient for the second rectangle -->
+            <defs>
+                <linearGradient id="rect2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(0,255,0);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(255, 165, 0);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- SVG rectangle element -->
+            <rect x="50" y="10" rx="10" ry="10" width="500" height="80" style="fill:url(#rect2Gradient);stroke-width:2;stroke:grey;opacity:0.6"
+            />
+
+            <text font-size="20" font-family="Verdana" x="200" y="30"> FantasyFootballLeague.com</text>
+
+        </svg>
+
+    </section>
+
+
+
+    <section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>League Type</th>
+                    <th>Cost</th>
+                    <th>Start Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Free league</td>
+                    <td>0$</td>
+                    <td>2/20/2016</td>
+                </tr>
+                <tr>
+                    <td>Pro league</td>
+                    <td>200$/season</td>
+                    <td>2/15/2016</td>
+                </tr>
+                <tr>
+                    <td>Weekly leagues</td>
+                    <td>20$/week</td>
+                    <td>3/1/2016</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <form action="" name="personalDetails">
+            <fieldset>
+                <legend>Personal Info</legend>
+                First name
+                <input type="text" name="fName" required autofocus/> Last name
+                <input type="text" name="lName" /> Date of Birth
+                <input type="date" name="dob" placeholder="Date of Birth" required/> Email
+                <input type="email" name="email" placeholder="Email" required/> Phone
+                <input type="tel" name="phone" placeholder="Phone" pattern="^\+\d{3}-\d{3}-\d{3}-\d{3}$" />
+                <!-- +254-712-040-480 -->
+
+            </fieldset>
+            <fieldset>
+                <legend>Profile Info</legend>
+
+                <input type="file" name="uploadProfilePicture" placeholder="Upload Profile Picture" />
+                <input type="text" name="desiredUsername" placeholder="Desired username" />
+                <input type="password" name="desiredPassword" placeholder="Desired password" />
+                <p> Choose League Type </p>
+                <input type="radio" name="leagueType" value="freeLeague" required />Free league
+                <input type="radio" name="leagueType" value="proLeague" required/>Pro league
+                <input type="radio" name="leagueType" value="weeklyLeagues" required/>Weekly leagues
+
+            </fieldset>
+
+            <!-- <button type="button">Submit</button> -->
+            <input type="submit" value="Submit" />
+
+        </form>
+
+    </section>
+
+    <section>
+        <h4>The output element</h4>
+
+        <label for="multiplicationTable">Simple multiplier</label>
+
+        <br/>
+        <br/>
+        <form onclick="product.value = (mplier.value) * (mplicand.value)">
+            <label for="mplier">Enter the multiplier</label>
+            <input type="number" id="mplier" value="1">
+            <label for="mplicand">Select a multiplicand</label>
+            <input type="number" value="1" id="mplicand">
+            <label for="product">Product</label>:
+            <output name="product" id="product" for="mplier mplicand"></output>
+        </form>
+
+        <h4>Datalist</h4>
+
+        <label for="os">Which operating system do you use?</label>
+        <input id="os" list="osys">
+
+        <datalist id="osys">
+            <option value="Microsoft Windows 7">
+                <option value="Microsoft Windows 8">
+                    <option value="Microsoft Windows 10">
+                        <option value="Mac OSX">
+                            <option value="Google Chrome OS">
+                                <option value="Linux">
+        </datalist>
+
+        <h4>Editable content</h4>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>
+                        <b>Car Model</b>
+                    </th>
+                    <th>
+                        <b>Today's Price(in USD)</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chevrolet Camaro 2015</td>
+                    <td contentEditable="true">45,350</td>
+                </tr>
+                <tr>
+                    <td>Ford Mustang 2014</td>
+                    <td contentEditable="true">37,980</td>
+                </tr>
+                <tr>
+                    <td>Buick LaCrosse 2016</td>
+                    <td contentEditable="true">51,430</td>
+                </tr>
+                <tr>
+                    <td>Dodge Avenger 2015</td>
+                    <td contentEditable="true">32,650</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Custom data attributes</h4>
+
+        <div id="myFavDessert" data-foodType="dessert" data-dessert1="Ice Cream" data-dessert2="Cheesecake">
+            I scream, you scream, we all scream ice cream. But i like cheesecakes too.
+        </div>
+
+    </section>
+    <footer class="footer">
+        Fantasy League.com: 2016 All rights reserved
+    </footer>
+</body>
+
+</html>
